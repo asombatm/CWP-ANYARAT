@@ -1,14 +1,21 @@
-number1 = int(input("Enter the first number: "))
-number2 = int(input("Enter the second number: "))
+#!/usr/bin/env python3
 
-result = 0
-i = 0
+import sys
 
-while i < abs(number2):
-    result += abs(number1)
-    i += 1
+if len(sys.argv) != 1:
+    print("none")
+else:
+    i = 0
 
-if (number1 < 0 and number2 > 0) or (number1 > 0 and number2 < 0):
-    result = -result
+    while i <= 10:
+        print(f"Table de {i}:", end=" ")
 
-print(number1, "x", number2, "=", result)
+        j = 0
+        while j <= 10:
+            print(i * j, end="")
+            if j < 10:
+                print(" ", end="")
+            j += 1
+
+        print()
+        i += 1
